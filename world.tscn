@@ -1,0 +1,67 @@
+[gd_scene load_steps=5 format=3 uid="uid://nnqf4wfdqx4g"]
+
+[ext_resource type="Texture2D" uid="uid://5a75j5rbly0y" path="res://assets/white_sq.png" id="1_yy68h"]
+[ext_resource type="PackedScene" uid="uid://bct5er7cjy6pi" path="res://block.tscn" id="2_hcygb"]
+[ext_resource type="PackedScene" uid="uid://bnfw7wyrfvsp5" path="res://player.tscn" id="3_6cw2w"]
+[ext_resource type="PackedScene" uid="uid://bva766g84pc1b" path="res://zombie.tscn" id="4_phqxd"]
+
+[node name="World" type="Node2D"]
+
+[node name="Background" type="Node2D" parent="."]
+
+[node name="WhiteSq" type="Sprite2D" parent="Background"]
+modulate = Color(0.67069, 0.67069, 0.67069, 1)
+z_index = -2
+position = Vector2(51.5, 21.5)
+scale = Vector2(27.3281, 27.1719)
+texture = ExtResource("1_yy68h")
+
+[node name="Enviroment" type="Node2D" parent="."]
+
+[node name="Block" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(115, 354)
+
+[node name="Block2" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(-301, 268)
+
+[node name="Block3" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(215, 20)
+
+[node name="Block4" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(-228, -113)
+
+[node name="Block5" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(211, -196)
+
+[node name="Block6" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(607, 270)
+
+[node name="Block7" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(385, 537)
+
+[node name="Block8" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(-285, 679)
+
+[node name="Block9" parent="Enviroment" instance=ExtResource("2_hcygb")]
+position = Vector2(-556, 410)
+
+[node name="Player" parent="." instance=ExtResource("3_6cw2w")]
+position = Vector2(35, 178)
+
+[node name="Zombie" parent="." instance=ExtResource("4_phqxd")]
+position = Vector2(-512, 592)
+
+[node name="Zombie2" parent="." instance=ExtResource("4_phqxd")]
+position = Vector2(9, 728)
+
+[node name="Zombie3" parent="." instance=ExtResource("4_phqxd")]
+position = Vector2(-500, 65)
+
+[node name="Zombie4" parent="." instance=ExtResource("4_phqxd")]
+position = Vector2(465, -6)
+
+[node name="Zombie5" parent="." instance=ExtResource("4_phqxd")]
+position = Vector2(572, 493)
+
+[node name="Zombie6" parent="." instance=ExtResource("4_phqxd")]
+position = Vector2(-113, -280)
